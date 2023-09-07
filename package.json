@@ -1,0 +1,35 @@
+{
+  "name": "template-hardhat",
+  "files": [
+    "artifacts/",
+    "contracts/"
+  ],
+  "scripts": {
+    "test": "npx hardhat test",
+    "coverage": "npx hardhat coverage",
+    "compile": "npx hardhat compile",
+    "deploy:mainnet": "npx hardhat run scripts/deploy.js --network ethereum",
+    "deploy:bsc": "npx hardhat run scripts/deploy.js --network bsc",
+    "deploy:avalanche": "npx hardhat run scripts/deploy.js --network avalanche",
+    "deploy:polygon": "npx hardhat run scripts/deploy.js --network polygon",
+    "deploy:arbitrum": "npx hardhat run scripts/deploy.js --network arbitrum",
+    "deploy:optimism": "npx hardhat run scripts/deploy.js --network optimism",
+    "deploy:goerli": "npx hardhat run scripts/deploy.js --network goerli",
+    "deploy:sepolia": "npx hardhat run scripts/deploy.js --network sepolia",
+    "deploy:bsc-testnet": "npx hardhat run scripts/deploy.js --network bsc-testnet",
+    "deploy:fuji": "npx hardhat run scripts/deploy.js --network fuji",
+    "deploy:mumbai": "npx hardhat run scripts/deploy.js --network mumbai",
+    "deploy:arbitrum-goerli": "npx hardhat run scripts/deploy.js --network arbitrum-goerli",
+    "deploy:optimism-goerli": "npx hardhat run scripts/deploy.js --network optimism-goerli"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@openzeppelin/hardhat-upgrades": "^2.2.1",
+    "hardhat": "^2.17.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "hardhat-deploy": "^0.11.37",
+    "hardhat-deploy-ethers": "^0.4.1"
+  }
+}
