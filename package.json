@@ -22,18 +22,18 @@
     "deploy:arbitrum-goerli": "npx hardhat run scripts/deploy.js --network arbitrum-goerli",
     "deploy:optimism-goerli": "npx hardhat run scripts/deploy.js --network optimism-goerli"
   },
-  "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
-    "@openzeppelin/hardhat-upgrades": "^2.2.1",
-    "hardhat": "^2.17.2",
-    "prettier": "^2.8.8",
-    "prettier-plugin-solidity": "^1.1.3",
-    "solhint": "^3.6.2",
-    "solhint-plugin-prettier": "^0.0.5"
-  },
   "dependencies": {
     "dotenv": "^16.3.1",
-    "hardhat-deploy": "^0.11.37",
+    "hardhat-deploy": "^0.11.43",
     "hardhat-deploy-ethers": "^0.4.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@openzeppelin/hardhat-upgrades": "^2.3.3",
+    "hardhat": "^2.18.3",
+    "prettier": "^2.8.8",
+    "prettier-plugin-solidity": "^1.1.3",
+    "solhint": "^4.0.0",
+    "solhint-plugin-prettier": "^0.0.5"
   }
 }
