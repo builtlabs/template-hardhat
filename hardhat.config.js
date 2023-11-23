@@ -5,7 +5,7 @@ require("@openzeppelin/hardhat-upgrades");
 require("hardhat-deploy");
 require("hardhat-deploy-ethers");
 
-const { ALCHEMY_MAINNET_KEY, ETHERSCAN_API_KEY, COINMARKETCAP_API_KEY } = process.env;
+const { ALCHEMY_MAINNET_KEY, ETHERSCAN_API_KEY, POLYGONSCAN_API_KEY, COINMARKETCAP_API_KEY } = process.env;
 
 function accounts() {
   if (process.env.MNEMONIC) return { mnemonic: process.env.MNEMONIC };
@@ -39,7 +39,13 @@ module.exports = {
     timeout: 100000000,
   },
   etherscan: {
-    apiKey: `${ETHERSCAN_API_KEY}`,
+    apiKey: {
+      mainnet: `${ETHERSCAN_API_KEY}`,
+      goerli: `${ETHERSCAN_API_KEY}`,
+      sepolia: `${ETHERSCAN_API_KEY}`,
+      polygon: `${POLYGONSCAN_API_KEY}`,
+      polygonMumbai: `${POLYGONSCAN_API_KEY}`,
+    },
   },
   gasReporter: {
     coinmarketcap: `${COINMARKETCAP_API_KEY}`,
